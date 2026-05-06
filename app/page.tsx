@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button"
+import { Switch } from "@/components/ui/switch"
+import { Field, FieldLabel } from "@/components/ui/field"
 
 export default function Page() {
   return (
@@ -7,6 +9,7 @@ export default function Page() {
         <div>
           <h1 className="font-medium">Test!</h1>
           <p>You may now add components and start building.</p>
+          <FieldSwitch />
           <p>We&apos;ve already added the button component for you.</p>
           <Button className="mt-2">Button</Button>
         </div>
@@ -15,5 +18,14 @@ export default function Page() {
         </div>
       </div>
     </div>
+  )
+}
+
+export function FieldSwitch() {
+  return (
+    <Field orientation="horizontal" className="w-fit">
+      <FieldLabel htmlFor="2fa">Multi-factor authentication</FieldLabel>
+      <Switch id="2fa" />
+    </Field>
   )
 }
